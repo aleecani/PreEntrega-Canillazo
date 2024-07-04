@@ -1,0 +1,22 @@
+{% extends 'aplicacion/index.html' %}
+
+
+{% block titulo %}
+<h1 class="text-white-40 mx-auto mt-2 mb-5">Buscar Productos.</h1>
+
+{% endblock titulo %}
+
+
+
+{% block contenido %}
+
+<form action="{% url 'encontrar_productos' %}" method='get'>
+    {% csrf_token %}
+    <table>
+        <p>Ingrese patron de busqueda: <input type="text" name="buscar" id="buscar"></p>
+    </table>
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% endblock contenido %}

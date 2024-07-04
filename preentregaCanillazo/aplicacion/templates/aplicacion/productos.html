@@ -1,0 +1,38 @@
+{% extends 'aplicacion/index.html' %}
+    
+{% block titulo %}
+<h1 class="text-white-40 mx-auto mt-2 mb-5">Productos Agregados.</h1>
+
+{% endblock titulo %}
+
+
+
+{% block contenido %}
+
+<h3>Puede seguir operando el prógrama. Si desea ver los productos agregados hagalo desde '/admin' en la dirección de la página.</h3>
+    
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Item</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        {% for p in productos %}
+            <tr>
+                <td>{{ p.id }}</td>
+                <td>{{ p.nombre }}</td>
+                <td>{{ p.nro_item }}</td>
+                <td>{{ p.precio }}</td>
+
+            </tr>
+        {% endfor %}
+            
+    </tbody>
+{% endblock contenido %}
+    
+    
